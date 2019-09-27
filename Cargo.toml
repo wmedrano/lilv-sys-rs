@@ -6,6 +6,7 @@ description = "FFI for lilv, a C library to make the use of LV2 plugins simple"
 edition = "2018"
 license = "MIT"
 keywords = ["audio", "lilv", "lv2"]
+repository = "https://github.com/wmedrano/lilv-sys-rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
