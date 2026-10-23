@@ -103,7 +103,9 @@ pub unsafe fn lilv_instance_get_extension_data(
 ) -> *const ::std::os::raw::c_void {
     if let Some(instance) = instance.as_ref() {
         if let Some(descriptor) = instance.lv2_descriptor.as_ref() {
-            return (descriptor.extension_data)(uri);
+            if let Some(extension_data) = descriptor.extension_data {
+                return extension_data(uri as *const _);
+            }
         }
     };
     std::ptr::null()
